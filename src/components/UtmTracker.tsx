@@ -48,7 +48,9 @@ export default function UtmTracker() {
             utm_campaign: finalCampaign,
             sessionId
           })
-        }).catch((e) => console.error("Error tracking visit:", e));
+        }).catch(() => {
+          // Fail silently for analytics when backend is not running
+        });
       }
     } catch (error) {
       console.error("UTM Tracker error:", error);

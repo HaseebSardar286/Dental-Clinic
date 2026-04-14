@@ -57,7 +57,6 @@ export default function DenburyHome() {
 
   return (
     <div className="bg-white">
-
       {/* Hero Section */}
       <section className="py-5 my-5 overflow-hidden">
         <div className="container">
@@ -68,12 +67,9 @@ export default function DenburyHome() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="col-12 col-lg-6 text-center text-lg-start mb-5 mb-lg-0"
             >
-              <div className="d-inline-flex align-items-center gap-2 px-3 py-1 bg-custom-teal bg-opacity-10 text-custom-teal rounded-pill small fw-bold text-uppercase mb-4">
-                <i
-                  className="fa-solid fa-star text-custom-teal"
-                  style={{ fontSize: "12px" }}
-                ></i>{" "}
-                Voted Best Dental Care 2024
+              <div className="d-inline-flex align-items-center gap-2 px-3 py-1 bg-custom-teal bg-opacity-10 text-white rounded-pill small fw-bold text-uppercase mb-4">
+                <i className="fa-solid fa-star text-white fs-6"></i> Voted Best
+                Dental Care 2024
               </div>
               <h1
                 className="display-3 fw-bold mb-4"
@@ -123,7 +119,7 @@ export default function DenburyHome() {
                   className="bg-success text-white rounded-circle d-flex align-items-center justify-content-center"
                   style={{ width: "48px", height: "48px" }}
                 >
-                  <i className="fa-solid fa-circle-check fs-4"></i>
+                  <i className="fa-solid fa-check-circle fs-4"></i>
                 </div>
                 <div>
                   <div className="small text-secondary fw-bold text-uppercase">
@@ -243,7 +239,7 @@ export default function DenburyHome() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="col-12 col-lg-7 text-start"
             >
-              <div className="d-inline-flex align-items-center gap-2 px-3 py-1 bg-custom-teal bg-opacity-10 text-custom-teal rounded-pill small fw-bold text-uppercase mb-4">
+              <div className="d-inline-flex align-items-center gap-2 px-3 py-1 bg-custom-teal bg-opacity-10 text-white rounded-pill small fw-bold text-uppercase mb-4">
                 Top Rated Dentist
               </div>
               <h2 className="display-5 fw-bold mb-3">Dr. Anusha Atique</h2>
