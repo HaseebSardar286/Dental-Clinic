@@ -1,0 +1,70 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --bs-custom-teal-rgb: 0, 139, 132;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.15)!important;
+  transform: translateY(-5px);
+}
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+.bg-custom-teal {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-custom-teal-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.text-custom-teal {
+  color: #008B84 !important;
+}
+
+.btn-custom-teal, .btn-custom-teal.text-white {
+  background-color: transparent !important;
+  border: 2px solid #008B84 !important;
+  color: #008B84 !important;
+}
+
+.btn-custom-teal:hover, .btn-custom-teal.text-white:hover {
+  background-color: #008B84 !important;
+  border-color: #008B84 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-custom-teal {
+  color: #008B84 !important;
+  border-color: #008B84 !important;
+}
+
+.btn-outline-custom-teal:hover {
+  background-color: #008B84 !important;
+  color: white !important;
+}
+
+@media all and (min-width: 992px) {
+  .hover-dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #008B84;
+}
