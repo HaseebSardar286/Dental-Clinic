@@ -14,6 +14,10 @@ body {
   letter-spacing: -0.01em;
 }
 
+.text-secondary {
+  color: #374151 !important;
+}
+
 h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
   font-family: var(--font-outfit), system-ui, sans-serif;
 }
@@ -36,15 +40,15 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
   color: #008B84 !important;
 }
 
-.btn-custom-teal, .btn-custom-teal.text-white {
-  background-color: transparent !important;
+.btn-custom-teal {
+  background-color: #008B84 !important;
   border: 2px solid #008B84 !important;
-  color: #008B84 !important;
+  color: #ffffff !important;
 }
 
-.btn-custom-teal:hover, .btn-custom-teal.text-white:hover {
-  background-color: #008B84 !important;
-  border-color: #008B84 !important;
+.btn-custom-teal:hover {
+  background-color: #00756f !important;
+  border-color: #00756f !important;
   color: #ffffff !important;
 }
 
