@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import toast from "react-hot-toast";
-import UtmTracker from "@/components/UtmTracker";
 import { motion } from "framer-motion";
 
 export default function DenburyHome() {
@@ -58,7 +57,6 @@ export default function DenburyHome() {
 
   return (
     <div className="bg-white">
-      <UtmTracker />
 
       {/* Hero Section */}
       <section className="py-5 my-5 overflow-hidden">

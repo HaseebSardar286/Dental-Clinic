@@ -3,8 +3,10 @@ import { Inter, Outfit } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import UtmTracker from "@/components/UtmTracker";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -24,6 +26,9 @@ export default function RootLayout({
       <body className="d-flex flex-column min-vh-100 bg-light font-sans">
         <Toaster position="top-right" />
         <Navbar />
+        <Suspense fallback={null}>
+          <UtmTracker />
+        </Suspense>
         <main className="flex-grow-1">
           {children}
         </main>
