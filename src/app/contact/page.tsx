@@ -2,6 +2,10 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faClock } from "@fortawesome/free-regular-svg-icons";
+import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -55,10 +59,10 @@ export default function ContactPage() {
             <div className="d-flex flex-column gap-4 mb-5">
               <div className="d-flex align-items-start gap-4">
                 <div
-                  className="bg-custom-teal bg-opacity-10 text-custom-teal rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                  className="bg-custom-teal bg-opacity-10 text-white rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                   style={{ width: "64px", height: "64px" }}
                 >
-                  <i className="fa-solid fa-location-dot fs-2"></i>
+                  <FontAwesomeIcon icon={faLocationDot} className="fs-2" />
                 </div>
                 <div>
                   <div className="small text-secondary fw-bold text-uppercase mb-1">
@@ -73,10 +77,10 @@ export default function ContactPage() {
               </div>
               <div className="d-flex align-items-start gap-4">
                 <div
-                  className="bg-custom-teal bg-opacity-10 text-custom-teal rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                  className="bg-custom-teal bg-opacity-10 text-white rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                   style={{ width: "64px", height: "64px" }}
                 >
-                  <i className="fa-solid fa-phone fs-2"></i>
+                  <FontAwesomeIcon icon={faPhone} className="fs-2" />
                 </div>
                 <div>
                   <div className="small text-secondary fw-bold text-uppercase mb-1">
@@ -89,10 +93,10 @@ export default function ContactPage() {
               </div>
               <div className="d-flex align-items-start gap-4">
                 <div
-                  className="bg-custom-teal bg-opacity-10 text-custom-teal rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                  className="bg-custom-teal bg-opacity-10 text-white rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                   style={{ width: "64px", height: "64px" }}
                 >
-                  <i className="fa-regular fa-envelope fs-2"></i>
+                  <FontAwesomeIcon icon={faEnvelope} className="fs-2" />
                 </div>
                 <div>
                   <div className="small text-secondary fw-bold text-uppercase mb-1">
@@ -105,10 +109,10 @@ export default function ContactPage() {
               </div>
               <div className="d-flex align-items-start gap-4">
                 <div
-                  className="bg-custom-teal bg-opacity-10 text-custom-teal rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                  className="bg-custom-teal bg-opacity-10 text-white rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                   style={{ width: "64px", height: "64px" }}
                 >
-                  <i className="fa-regular fa-clock fs-2"></i>
+                  <FontAwesomeIcon icon={faClock} className="fs-2" />
                 </div>
                 <div>
                   <div className="small text-secondary fw-bold text-uppercase mb-1">
@@ -131,14 +135,14 @@ export default function ContactPage() {
                 className="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center p-0 text-custom-teal"
                 style={{ width: "48px", height: "48px" }}
               >
-                <i className="fa-brands fa-instagram fs-5"></i>
+                <FontAwesomeIcon icon={faInstagram} className="fs-5" />
               </a>
               <a
                 href="#"
                 className="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center p-0 text-custom-teal"
                 style={{ width: "48px", height: "48px" }}
               >
-                <i className="fa-brands fa-facebook-f fs-5"></i>
+                <FontAwesomeIcon icon={faFacebookF} className="fs-5" />
               </a>
             </div>
           </motion.div>

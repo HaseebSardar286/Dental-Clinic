@@ -2,6 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faShieldCat, faHeart, faQrcode, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvira, faMedium, faGoogle, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faBuilding, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 export default function PatientResourcesPage() {
   return (
@@ -158,34 +162,34 @@ export default function PatientResourcesPage() {
         </h2>
         <div className="d-flex flex-wrap justify-content-center align-items-center gap-5 my-5 opacity-75">
           <span className="fs-3 fw-bold text-success d-flex flex-column align-items-center gap-1">
-            <i className="fa-solid fa-play fs-1"></i>{" "}
+            <FontAwesomeIcon icon={faPlay} className="fs-1" />{" "}
             <span style={{ fontSize: "14px" }}>DELTA DENTAL</span>
           </span>
           <span className="fs-3 fw-bold text-primary d-flex flex-column align-items-center gap-1">
-            <i className="fa-solid fa-shield-cat fs-1"></i>{" "}
+            <FontAwesomeIcon icon={faShieldCat} className="fs-1" />{" "}
             <span style={{ fontSize: "14px" }}>BlueCross BlueShield</span>
           </span>
           <span className="fs-2 fw-bold text-primary d-flex align-items-center gap-2">
-            <i className="fa-brands fa-envira text-success"></i> cigna
+            <FontAwesomeIcon icon={faEnvira} className="text-success" /> cigna
           </span>
           <span className="fs-4 fw-bold text-info d-flex align-items-center gap-2">
-            <i className="fa-regular fa-building text-primary"></i>{" "}
+            <FontAwesomeIcon icon={faBuilding} className="text-primary" />{" "}
             UnitedHealthcare
           </span>
           <span className="fs-3 fw-bold text-success d-flex align-items-center gap-2">
-            <i className="fa-brands fa-google text-success"></i> Guardian
+            <FontAwesomeIcon icon={faGoogle} className="text-success" /> Guardian
           </span>
           <span
             className="fs-2 fw-bold text-purple d-flex align-items-center gap-2"
             style={{ color: "purple" }}
           >
-            <i className="fa-solid fa-heart"></i> aetna
+            <FontAwesomeIcon icon={faHeart} /> aetna
           </span>
           <span className="fs-5 fw-bold text-dark border border-dark rounded-pill px-3 py-2">
             HUSKY HEALTH
           </span>
           <span className="fs-3 fw-bold text-info d-flex align-items-center gap-2">
-            <i className="fa-brands fa-medium text-info"></i> MetLife
+            <FontAwesomeIcon icon={faMedium} className="text-info" /> MetLife
           </span>
         </div>
       </section>
@@ -241,10 +245,7 @@ export default function PatientResourcesPage() {
               </ul>
 
               <div className="d-flex align-items-center gap-3 bg-white p-3 rounded-3 shadow-sm border">
-                <i
-                  className="fa-solid fa-qrcode text-dark"
-                  style={{ fontSize: "4rem" }}
-                ></i>
+                <FontAwesomeIcon icon={faQrcode} className="text-dark" style={{ fontSize: "4rem" }} />
                 <span
                   className="text-secondary fw-bold"
                   style={{ fontSize: "11px" }}
@@ -289,10 +290,7 @@ export default function PatientResourcesPage() {
               </ul>
 
               <div className="d-flex align-items-center gap-3 bg-white p-3 rounded-3 shadow-sm border">
-                <i
-                  className="fa-solid fa-qrcode text-dark"
-                  style={{ fontSize: "4rem" }}
-                ></i>
+                <FontAwesomeIcon icon={faQrcode} className="text-dark" style={{ fontSize: "4rem" }} />
                 <span
                   className="text-secondary fw-bold"
                   style={{ fontSize: "11px" }}
@@ -338,15 +336,15 @@ export default function PatientResourcesPage() {
           </div>
 
           <p className="small fw-bold text-dark mb-2 border-bottom border-secondary border-opacity-25 pb-2">
-            <i className="fa-solid fa-phone text-custom-teal me-2"></i> Tel:
+            <FontAwesomeIcon icon={faPhone} className="text-custom-teal me-2" /> Tel:
             (475) 237-9011
           </p>
           <p className="small fw-bold text-dark mb-2 border-bottom border-secondary border-opacity-25 pb-2">
-            <i className="fa-regular fa-envelope text-custom-teal me-2"></i>{" "}
+            <FontAwesomeIcon icon={faEnvelope} className="text-custom-teal me-2" />{" "}
             Email: danburybrightsmiles@gmail.com
           </p>
           <p className="small fw-bold text-dark mb-4">
-            <i className="fa-solid fa-location-dot text-custom-teal me-2"></i>{" "}
+            <FontAwesomeIcon icon={faLocationDot} className="text-custom-teal me-2" />{" "}
             57 North St, Suite 411 Danbury, CT 06810
           </p>
 
@@ -356,14 +354,14 @@ export default function PatientResourcesPage() {
               className="text-dark bg-white shadow-sm border rounded-circle d-flex align-items-center justify-content-center"
               style={{ width: 40, height: 40 }}
             >
-              <i className="fa-brands fa-facebook-f fs-5"></i>
+              <FontAwesomeIcon icon={faFacebookF} className="fs-5" />
             </a>
             <a
               href="#"
               className="text-dark bg-white shadow-sm border rounded-circle d-flex align-items-center justify-content-center"
               style={{ width: 40, height: 40 }}
             >
-              <i className="fa-brands fa-instagram fs-5"></i>
+              <FontAwesomeIcon icon={faInstagram} className="fs-5" />
             </a>
           </div>
         </div>

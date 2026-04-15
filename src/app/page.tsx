@@ -4,6 +4,31 @@ import { useState } from "react";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faStar,
+  faArrowRight,
+  faPhone,
+  faCheckCircle,
+  faTooth,
+  faWandMagicSparkles,
+  faShieldHalved,
+  faMicroscope,
+  faTeeth,
+  faChild,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import { faCalendar } from "@fortawesome/free-regular-svg-icons";
+import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+
+const iconMap: Record<string, any> = {
+  "fa-tooth": faTooth,
+  "fa-wand-magic-sparkles": faWandMagicSparkles,
+  "fa-shield-halved": faShieldHalved,
+  "fa-microscope": faMicroscope,
+  "fa-teeth": faTeeth,
+  "fa-child": faChild,
+};
 
 export default function DenburyHome() {
   const [formData, setFormData] = useState({
@@ -68,8 +93,8 @@ export default function DenburyHome() {
               className="col-12 col-lg-6 text-center text-lg-start mb-5 mb-lg-0"
             >
               <div className="d-inline-flex align-items-center gap-2 px-3 py-1 bg-custom-teal bg-opacity-10 text-white rounded-pill small fw-bold text-uppercase mb-4">
-                <i className="fa-solid fa-star text-white fs-6"></i> Voted Best
-                Dental Care 2024
+                <FontAwesomeIcon icon={faStar} className="text-white fs-6" />{" "}
+                Voted Best Dental Care 2024
               </div>
               <h1
                 className="display-3 fw-bold mb-4"
@@ -88,13 +113,14 @@ export default function DenburyHome() {
                   href="/contact"
                   className="btn btn-custom-teal text-white btn-lg rounded-pill fw-bold shadow d-flex align-items-center justify-content-center gap-2 px-4 py-3"
                 >
-                  Get Started <i className="fa-solid fa-arrow-right fs-5"></i>
+                  Get Started{" "}
+                  <FontAwesomeIcon icon={faArrowRight} className="fs-5" />
                 </Link>
                 <a
                   href="tel:+14752379011"
                   className="btn btn-outline-dark btn-lg rounded-pill fw-bold d-flex align-items-center justify-content-center gap-2 px-4 py-3"
                 >
-                  <i className="fa-solid fa-phone fs-5"></i> Call Us
+                  <FontAwesomeIcon icon={faPhone} className="fs-5" /> Call Us
                 </a>
               </div>
             </motion.div>
@@ -119,7 +145,7 @@ export default function DenburyHome() {
                   className="bg-success text-white rounded-circle d-flex align-items-center justify-content-center"
                   style={{ width: "48px", height: "48px" }}
                 >
-                  <i className="fa-solid fa-check-circle fs-4"></i>
+                  <FontAwesomeIcon icon={faCheckCircle} className="fs-4" />
                 </div>
                 <div>
                   <div className="small text-secondary fw-bold text-uppercase">
@@ -192,10 +218,13 @@ export default function DenburyHome() {
                 <div className="card h-100 border-0 shadow-sm p-4 text-start rounded-4 hover-shadow transition">
                   <div className="card-body">
                     <div
-                      className="bg-custom-teal bg-opacity-10 text-custom-teal rounded-3 d-flex align-items-center justify-content-center mb-4"
+                      className="bg-custom-teal bg-opacity-10 text-white rounded-3 d-flex align-items-center justify-content-center mb-4"
                       style={{ width: "56px", height: "56px" }}
                     >
-                      <i className={`fa-solid ${s.icon} fs-3`}></i>
+                      <FontAwesomeIcon
+                        icon={iconMap[s.icon]}
+                        className="fs-3 "
+                      />
                     </div>
                     <h3 className="h4 fw-bold mb-3">{s.title}</h3>
                     <p className="text-secondary mb-4">{s.desc}</p>
@@ -203,7 +232,7 @@ export default function DenburyHome() {
                       href={s.link}
                       className="text-custom-teal fw-bold text-decoration-none d-flex align-items-center gap-2"
                     >
-                      Learn More <i className="fa-solid fa-arrow-right"></i>
+                      Learn More <FontAwesomeIcon icon={faArrowRight} />
                     </Link>
                   </div>
                 </div>
@@ -253,7 +282,7 @@ export default function DenburyHome() {
                 href="/about"
                 className="btn btn-outline-custom-teal btn-lg rounded-pill fw-bold shadow-sm d-inline-flex align-items-center gap-2 px-4 py-3"
               >
-                About Me <i className="fa-solid fa-arrow-right"></i>
+                About Me <FontAwesomeIcon icon={faArrowRight} />
               </Link>
             </motion.div>
           </div>
@@ -338,11 +367,11 @@ export default function DenburyHome() {
                 <div className="card h-100 border p-4 bg-light text-start rounded-4 hover-shadow transition">
                   <div className="card-body d-flex flex-column">
                     <div className="text-warning mb-3">
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
+                      <FontAwesomeIcon icon={faStar} />
+                      <FontAwesomeIcon icon={faStar} />
+                      <FontAwesomeIcon icon={faStar} />
+                      <FontAwesomeIcon icon={faStar} />
+                      <FontAwesomeIcon icon={faStar} />
                     </div>
                     <p
                       className="text-secondary flex-grow-1 lead"
@@ -475,14 +504,20 @@ export default function DenburyHome() {
             <div className="col-12 col-lg-5">
               <div className="ps-lg-5 lh-lg border-start border-secondary py-3">
                 <div className="mb-5">
-                  <i className="fa-solid fa-location-dot text-custom-teal mb-3 fs-2"></i>
+                  <FontAwesomeIcon
+                    icon={faLocationDot}
+                    className="text-custom-teal mb-3 fs-2"
+                  />
                   <h4 className="h3 fw-bold mb-1">Our Location</h4>
                   <p className="text-light opacity-75">
                     57 North St, Suite 411 <br /> Danbury, CT 06810
                   </p>
                 </div>
                 <div className="mb-5">
-                  <i className="fa-regular fa-calendar text-custom-teal mb-3 fs-2"></i>
+                  <FontAwesomeIcon
+                    icon={faCalendar}
+                    className="text-custom-teal mb-3 fs-2"
+                  />
                   <h4 className="h3 fw-bold mb-1">Clinic Hours</h4>
                   <p className="text-light opacity-75">
                     Mon - Fri: 8:00 AM - 6:00 PM <br /> Sat: 9:00 AM - 2:00 PM
@@ -493,13 +528,13 @@ export default function DenburyHome() {
                     className="rounded-circle border border-secondary d-flex align-items-center justify-content-center"
                     style={{ width: "48px", height: "48px" }}
                   >
-                    <i className="fa-brands fa-instagram fs-5"></i>
+                    <FontAwesomeIcon icon={faInstagram} className="fs-5" />
                   </div>
                   <div
                     className="rounded-circle border border-secondary d-flex align-items-center justify-content-center"
                     style={{ width: "48px", height: "48px" }}
                   >
-                    <i className="fa-brands fa-facebook-f fs-5"></i>
+                    <FontAwesomeIcon icon={faFacebookF} className="fs-5" />
                   </div>
                 </div>
               </div>
